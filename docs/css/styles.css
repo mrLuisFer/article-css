@@ -65,6 +65,11 @@ body {
 	padding-right: 39px;
 	box-shadow: 2px 3px 8px var(--desaturatedBlue);
 	border-radius: 10px;
+	transition: box-shadow 0.4s ease;
+}
+
+.container-card:active {
+	box-shadow: 3.5px 4.5px 15px var(--desaturatedBlue);
 }
 
 .img-container {
@@ -193,6 +198,7 @@ body {
 	body {
 		display: block;
 		padding-top: 20px;
+		overflow-y: hidden;
 	}
 
 	.container-card {

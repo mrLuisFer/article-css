@@ -24,3 +24,7 @@ shareBack.addEventListener('click', function () {
     stateMobile.classList.add('hidde');
   }
 });
+var avatar = document.querySelector('#avatar-michelle');
+avatar.addEventListener('click', function () {
+  console.log('Thanks for testing my app');
+});
