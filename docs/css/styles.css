@@ -1,0 +1,272 @@
+:root {
+	/* Colors */
+	--grayishBlue: hsl(217, 19%, 35%);
+	--desaturatedBlue: hsl(214, 17%, 51%);
+	--grayish: hsl(212, 23%, 69%);
+	--lightBlue: hsl(210, 68%, 75%);
+	--light: hsl(208, 45%, 82%);
+
+	font-size: 13px;
+}
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Manrope', sans-serif;
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	background: var(--light);
+}
+
+/* Animations */
+
+@keyframes visible {
+	20% {
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 0.4;
+	}
+	60% {
+		opacity: 0.6;
+	}
+	80% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.container-card {
+	display: flex;
+	margin: 0 auto;
+	width: 726px;
+	height: 279px;
+	background: #ffffff;
+	color: var(--grayishBlue);
+	padding-right: 39px;
+	box-shadow: 2px 3px 8px var(--desaturatedBlue);
+	border-radius: 10px;
+}
+
+.img-container {
+	margin-right: 30px;
+}
+
+.img-header {
+	width: 285px;
+	height: 279px;
+	border: none;
+	outline: none;
+	border-radius: 10px 0 0 10px;
+}
+
+.title-text {
+	font-size: 20px;
+	margin-top: 39px;
+	font-weight: 700;
+}
+
+.parag-text {
+	margin: 16px 0;
+	color: var(--desaturatedBlue);
+	line-height: 1.6;
+	font-weight: 500;
+}
+
+.avatar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: auto;
+	position: relative;
+}
+
+.avatar-container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 10;
+}
+
+.avatar-img {
+	border-radius: 50%;
+	margin-right: 16px;
+}
+
+.avatar-text {
+	display: inline-block;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.avatar-date {
+	display: block;
+	color: var(--grayish);
+	font-size: 11px;
+}
+
+.share-container {
+	margin-left: 164px;
+}
+
+.share-img {
+	background: rgba(170, 155, 155, 0.225);
+	border-radius: 50%;
+	padding: 6.5px;
+}
+
+@media screen and (min-width: 601px) {
+	.avatar-state {
+		animation-name: visible;
+		position: absolute;
+		background: var(--grayishBlue);
+		max-width: 247px;
+		height: 54px;
+		right: -100px;
+		top: -70px;
+		padding: 0 35px;
+		display: flex;
+		align-items: center;
+		border-radius: 10px;
+		opacity: 0.9;
+		transition: all 0.4s ease-in;
+		animation-duration: 0.3s;
+	}
+
+	.avatar-state::after {
+		content: '';
+		border-top: 12px solid var(--grayishBlue);
+		border-right: 12px solid transparent;
+		border-left: 12px solid transparent;
+		border-bottom: 12px solid transparent;
+		position: absolute;
+		bottom: -23px;
+		right: 103px;
+	}
+
+	.avatar-icons {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.state-text {
+		color: var(--light);
+		font-size: 14px;
+		line-height: 50px;
+		letter-spacing: 5px;
+	}
+
+	.state-icon {
+		margin-left: 18px;
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		display: block;
+		padding-top: 20px;
+	}
+
+	.container-card {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		width: 326px;
+		height: auto;
+		padding: 0;
+		padding-bottom: 15px;
+		position: relative;
+	}
+
+	.img-container {
+		margin: 0;
+	}
+
+	.img-header {
+		width: 100%;
+		border-radius: 10px 10px 0 0;
+	}
+
+	.container {
+		padding: 0 32px;
+	}
+
+	.title-text {
+		margin-top: 33px;
+		font-size: 16px;
+	}
+
+	.parag-text {
+		font-size: 13.2px;
+		margin-top: 16px;
+		margin-bottom: 35px;
+	}
+
+	.avatar-container {
+		display: flex;
+	}
+
+	.share-container {
+		margin-left: 54px;
+	}
+
+	.state-mobile {
+		background: var(--grayishBlue);
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 25px;
+		padding: 30px 33px;
+		border-radius: 0 0 10px 10px;
+	}
+
+	.avatar-icons {
+		display: flex;
+		align-items: center;
+	}
+
+	.state-text {
+		font-size: 11px;
+		color: var(--grayish);
+		letter-spacing: 4px;
+	}
+
+	.state-icon {
+		margin-left: 22px;
+		height: 20px;
+	}
+
+	.icon-back {
+		background: hsla(214, 17%, 51%, 0.795);
+		border-radius: 50%;
+		padding: 6.5px;
+		transition: all 0.5s ease;
+	}
+
+	.icon-back:hover {
+		transform: rotate(360deg);
+	}
+}
+
+.hidde {
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+}
