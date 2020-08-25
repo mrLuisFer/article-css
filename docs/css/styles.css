@@ -14,10 +14,16 @@ html {
 	box-sizing: border-box;
 }
 
-* {
+*,
+*::before,
+*::after {
 	padding: 0;
 	margin: 0;
 	box-sizing: inherit;
+}
+
+*::selection {
+	background: var(--light);
 }
 
 body {
@@ -26,6 +32,7 @@ body {
 	place-items: center;
 	height: 100vh;
 	background: var(--light);
+	overflow-x: hidden;
 }
 
 /* Animations */
@@ -125,6 +132,14 @@ body {
 	background: rgba(170, 155, 155, 0.225);
 	border-radius: 50%;
 	padding: 6.5px;
+	cursor: pointer;
+	transition: background 0.1s ease-in;
+	transition: transform 0.9s ease;
+}
+
+.share-img:hover {
+	background: rgba(170, 155, 185, 0.525);
+	transform: rotate(360deg);
 }
 
 @media screen and (min-width: 601px) {
@@ -257,6 +272,7 @@ body {
 		background: hsla(214, 17%, 51%, 0.795);
 		border-radius: 50%;
 		padding: 6.5px;
+		cursor: pointer;
 		transition: all 0.5s ease;
 	}
 
