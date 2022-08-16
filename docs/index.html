@@ -1,130 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
-		<!-- Google Fonst -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- Font Awesome -->
-		<script
-			src="https://kit.fontawesome.com/0b9946e474.js"
-			crossorigin="anonymous"
-		></script>
-		<!-- CSS -->
-		<link rel="stylesheet" href="./css/styles.css" />
-		<title>Article Aomponent</title>
-	</head>
-	<body>
-		<div class="container-card">
-			<div class="img-container">
-				<img class="img-header" src="./images/drawers.jpg" alt="drawers" />
-			</div>
-			<div class="container">
-				<h1 class="title-text">
-					Shift the overall look and feel by adding these wonderful touches to
-					furniture in your home
-				</h1>
-				<p class="parag-text">
-					Ever been in a room and felt like something was missing? Perhaps it
-					felt slightly bare and uninviting. I’ve got some simple tips to help
-					you make any room feel complete.
-				</p>
-				<div class="avatar">
-					<!-- Deafult -->
-					<div id="avatar-default" class="avatar-container">
-						<img
-							class="avatar-img"
-							id="avatar-michelle"
-							src="./images/avatar-michelle.jpg"
-							alt="michelle"
-							width="40px"
-							height="40px"
-						/>
-						<p class="avatar-text">
-							Michelle Appleton <span class="avatar-date">28 Jun 2020</span>
-						</p>
-						<!-- Share Bnt -->
-						<div id="share-container" class="share-container">
-							<img
-								id="share-btn"
-								class="share-img"
-								src="./images/icon-share.svg"
-								alt="share"
-							/>
-						</div>
-					</div>
-					<!-- State Desktop -->
-					<div id="avatar-state" class="avatar-state hidde">
-						<p class="avatar-icons">
-							<span class="state-text">SHARE</span>
-							<a href="">
-								<img
-									class="state-icon"
-									src="./images/icon-facebook.svg"
-									alt="facebok"
-								/>
-							</a>
-							<a href="">
-								<img
-									class="state-icon"
-									src="./images/icon-twitter.svg"
-									alt="twitter"
-							/></a>
-							<a href="">
-								<img
-									class="state-icon"
-									src="./images/icon-pinterest.svg"
-									alt="pinterest"
-								/>
-							</a>
-						</p>
-					</div>
-				</div>
-				<!-- State Mobile -->
-				<!-- I think its really bad -->
-				<div id="stateMobile" class="state-mobile hidde">
-					<p class="avatar-icons">
-						<span class="state-text">SHARE</span>
-						<a href="">
-							<img
-								class="state-icon"
-								src="./images/icon-facebook.svg"
-								alt="facebok"
-							/>
-						</a>
-						<a href="">
-							<img
-								class="state-icon"
-								src="./images/icon-twitter.svg"
-								alt="twitter"
-						/></a>
-						<a href="">
-							<img
-								class="state-icon"
-								src="./images/icon-pinterest.svg"
-								alt="pinterest"
-							/>
-						</a>
-					</p>
-					<img
-						class="icon-back"
-						id="icon-back"
-						src="./images/icon-back.svg"
-						alt="icon-back"
-					/>
-				</div>
-			</div>
-		</div>
-		<script src="./js/dist/index.dev.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/0b9946e474.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Primary Meta Tags -->
+    <title>Article Preview Component</title>
+    <meta name="title" content="Article Preview Component" />
+    <meta
+      name="description"
+      content="Practice your layout skills with this article preview component. There's lots of fun to be had playing around with animations for the sharing icons as well."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://https://mrluisfer.github.io/article-css/"
+    />
+    <meta property="og:title" content="Article Preview Component" />
+    <meta
+      property="og:description"
+      content="Practice your layout skills with this article preview component. There's lots of fun to be had playing around with animations for the sharing icons as well."
+    />
+    <meta property="og:image" content="./images/article-preview.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://https://mrluisfer.github.io/article-css/"
+    />
+    <meta property="twitter:title" content="Article Preview Component" />
+    <meta
+      property="twitter:description"
+      content="Practice your layout skills with this article preview component. There's lots of fun to be had playing around with animations for the sharing icons as well."
+    />
+    <meta property="twitter:image" content="./images/article-preview.jpg" />
+    <meta name="author" content="mrLuisFer" />
+  </head>
+  <body>
+    <div class="container-card">
+      <div class="img-container">
+        <img class="img-header" src="./images/drawers.jpg" alt="drawers" />
+      </div>
+      <div class="container">
+        <h1 class="title-text">
+          Shift the overall look and feel by adding these wonderful touches to
+          furniture in your home
+        </h1>
+        <p class="parag-text">
+          Ever been in a room and felt like something was missing? Perhaps it
+          felt slightly bare and uninviting. I’ve got some simple tips to help
+          you make any room feel complete.
+        </p>
+        <div class="avatar">
+          <!-- Deafult -->
+          <div id="avatar-default" class="avatar-container">
+            <img
+              class="avatar-img"
+              id="avatar-michelle"
+              src="./images/avatar-michelle.jpg"
+              alt="michelle"
+              width="40px"
+              height="40px"
+            />
+            <p class="avatar-text">
+              Michelle Appleton <span class="avatar-date">28 Jun 2020</span>
+            </p>
+            <!-- Share Bnt -->
+            <div id="share-container" class="share-container">
+              <img
+                id="share-btn"
+                class="share-img"
+                src="./images/icon-share.svg"
+                alt="share"
+              />
+            </div>
+          </div>
+          <!-- State Desktop -->
+          <div id="avatar-state" class="avatar-state hidde">
+            <p class="avatar-icons">
+              <span class="state-text">SHARE</span>
+              <a href="">
+                <img
+                  class="state-icon"
+                  src="./images/icon-facebook.svg"
+                  alt="facebok"
+                />
+              </a>
+              <a href="">
+                <img
+                  class="state-icon"
+                  src="./images/icon-twitter.svg"
+                  alt="twitter"
+              /></a>
+              <a href="">
+                <img
+                  class="state-icon"
+                  src="./images/icon-pinterest.svg"
+                  alt="pinterest"
+                />
+              </a>
+            </p>
+          </div>
+        </div>
+        <!-- State Mobile -->
+        <!-- I think its really bad -->
+        <div id="stateMobile" class="state-mobile hidde">
+          <p class="avatar-icons">
+            <span class="state-text">SHARE</span>
+            <a href="">
+              <img
+                class="state-icon"
+                src="./images/icon-facebook.svg"
+                alt="facebok"
+              />
+            </a>
+            <a href="">
+              <img
+                class="state-icon"
+                src="./images/icon-twitter.svg"
+                alt="twitter"
+            /></a>
+            <a href="">
+              <img
+                class="state-icon"
+                src="./images/icon-pinterest.svg"
+                alt="pinterest"
+              />
+            </a>
+          </p>
+          <img
+            class="icon-back"
+            id="icon-back"
+            src="./images/icon-back.svg"
+            alt="icon-back"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="./js/dist/index.dev.js"></script>
+  </body>
 </html>
